@@ -1,10 +1,37 @@
 html, body {
-  padding: 0;
+  padding: 25px;
   margin: 0;
+	position: relative;
 }
 
 .menu-item {
   width: 200px;
-  height: 70px;
-  background-color: orange;
+  line-height: 70px;
+	text-align: center;
+	border: 1px solid black;
+	vertical-align: middle;
+	/*background: pink;*/
+}
+
+#startNav .menu-item{
+	background: pink;
+}
+#subz{
+	width: 200px;
+	position: absolute;
+	left: 226px;
+	top: 168px;
+}
+#subz .menu-item{
+	background: violet;
+}
+
+#subz_subz{
+	width: 200px;
+	position: absolute;
+	left: 201px;
+	top: 144px;
+}
+#subz_subz .menu-item{
+	background: limegreen;
 }
