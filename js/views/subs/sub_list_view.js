@@ -1,4 +1,4 @@
-SubListView = Backbone.View.extend({	
+SubListView = Backbone.View.extend({
 
 	initialize: function () {
 		this.render();
@@ -20,9 +20,4 @@ SubListView = Backbone.View.extend({
 			})
 			this.$el.find('.item_3').append(this.subViews.$el);
 	}
-	//
-	// unRenderSubViews: function(){
-	// 	this.subViews.remove();
-	// }
-
 })

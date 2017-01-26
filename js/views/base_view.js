@@ -19,7 +19,6 @@ BaseView = Backbone.View.extend({
 			className:'itemViews',
 			collection: new ItemCollection(MENU)
 		})
-
 		$('#navigation').append(this.itemList.$el)
 	}
 })

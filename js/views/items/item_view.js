@@ -20,7 +20,7 @@ ItemView = Backbone.View.extend({
 				className:'subViews',
 				collection: new SubCollection(this.model.get('submenu'))
 			})
-			this.$el.find('.item_3').append(this.subViews.$el);
+			this.$el.find('.menu-item').append(this.subViews.$el);
 		}
 	},
 
