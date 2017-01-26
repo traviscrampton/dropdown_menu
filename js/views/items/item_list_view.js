@@ -1,10 +1,5 @@
 ItemListView = Backbone.View.extend({
 
-	// events: {
-	// 	'mouseenter .item' : 'renderSubViews',
-	// 	'mouseleave .item' : 'unRenderSubViews'
-	// },
-
 	initialize: function () {
 		this.render();
 	},
@@ -25,9 +20,4 @@ ItemListView = Backbone.View.extend({
 			})
 			this.$el.find('.item_3').append(this.subViews.$el);
 	}
-	//
-	// unRenderSubViews: function(){
-	// 	this.subViews.remove();
-	// }
-
 })

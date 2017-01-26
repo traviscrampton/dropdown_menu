@@ -2,7 +2,7 @@ SubView = Backbone.View.extend({
 	events: {
 		'mouseenter .sub_3' : 'renderSubViews',
 		'mouseleave .sub_3' : 'removeSubViews',
-		'click .sub' : 'alertItemName'
+		'click .menu-item' : 'alertItemName'
 	},
 
 	initialize: function(){
@@ -11,7 +11,7 @@ SubView = Backbone.View.extend({
 
 	render: function(){
 		template = _.template($('#Template').html())
-		this.$el.html(template({item: this.model, dom_id: this.model.dom_id(), category:this.model.category}))
+		this.$el.html(template({item: this.model, dom_id: this.model.dom_id()}))
 	},
 
 	renderSubViews: function(){
@@ -31,7 +31,7 @@ SubView = Backbone.View.extend({
 	},
 
 	alertItemName: function(e){
-		title = $(e.currentTarget).text();
-		alert(title);
+		alert(this.model.get('title'));
+		e.stopPropagation();
 	}
 })

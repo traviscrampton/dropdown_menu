@@ -1,10 +1,5 @@
 InnerSubListView = Backbone.View.extend({
 
-	// events: {
-	// 	'mouseenter .item' : 'renderSubViews',
-	// 	'mouseleave .item' : 'unRenderSubViews'
-	// },
-
 	initialize: function () {
 		this.render();
 	},
@@ -17,11 +12,6 @@ InnerSubListView = Backbone.View.extend({
 		this.$el.append(new InnerSubView({
 			model: item
 		}).el)
-	},
-
-	//
-	// unRenderSubViews: function(){
-	// 	this.subViews.remove();
-	// }
+	}
 
 })

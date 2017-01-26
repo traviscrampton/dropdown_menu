@@ -1,7 +1,8 @@
 InnerSubView = Backbone.View.extend({
 
 	events: {
-		'mouseleave .menu-item' : "removeAllViews"
+		'mouseleave .menu-item' : "removeAllViews",
+		'click .menu-item' : 'alertItemName'
 	},
 
 	initialize: function(){
@@ -17,5 +18,12 @@ InnerSubView = Backbone.View.extend({
 		if($('.item_3:hover').length < 1){
 			this.trigger('removeSubTabs')
 		}
+	},
+
+	alertItemName: function(e){
+		alert(this.model.get('title'));
+		e.stopPropagation();
 	}
+
+
 })

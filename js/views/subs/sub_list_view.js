@@ -1,9 +1,4 @@
-SubListView = Backbone.View.extend({
-
-	// events: {
-	// 	'mouseenter .item' : 'renderSubViews',
-	// 	'mouseleave .item' : 'unRenderSubViews'
-	// },
+SubListView = Backbone.View.extend({	
 
 	initialize: function () {
 		this.render();
