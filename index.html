@@ -11,41 +11,24 @@
   <link rel="stylesheet" href="dropdown_menu.css">
 </head>
 <body id="navigation">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="js/dropdown_menu.js"></script>
-<script src="libs/underscore/underscore.min.js"></script>
-<script src="libs/backbone/backbone.min.js"></script>
-<script src="js/views/base_view.js"></script>
-<script src="js/views/navigation/item_view.js"></script>
-<script src="js/views/navigation/sub_view.js"></script>
-<script src="js/views/navigation/sub_sub_view.js"></script>
-<script src='js/app.js'></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/dropdown_menu.js"></script>
+	<script src="libs/underscore/underscore.min.js"></script>
+	<script src="libs/backbone/backbone.min.js"></script>
+	<script src="js/models/item.js"></script>
+	<script src="js/models/sub.js"></script>
+	<script src="js/models/inner_sub.js"></script>
+	<script src="js/views/base_view.js"></script>
+	<script src="js/views/items/item_list_view.js"></script>
+	<script src="js/views/items/item_view.js"></script>
+	<script src="js/views/subs/sub_list_view.js"></script>
+	<script src="js/views/subs/sub_view.js"></script>
+	<script src="js/views/inner_subs/inner_sub_list_view.js"></script>
+	<script src="js/views/inner_subs/inner_sub_view.js"></script>
+	<script src='js/app.js'></script>
 
-<script type="text/template" id="subsubViews">
-	<center id="subz_subz">
-		<div class="menu-item">subSub 1</div>
-		<div class="menu-item">subSub 2</div>
-		<div class="menu-item">subSub 3</div>
-	</center>
-</script>
-
-<script type="text/template" id="subviews">
-	<center id="subz">
-		<div class="menu-item">Sub 1</div>
-		<div class="menu-item">Sub 2</div>
-		<div class="menu-item sub_3">Sub 3</div>
-	</center>
-</script>
-
-<script type="text/template" id="part_1_full_navigation">
-	<div id="startNav">
-		<div class="menu-item">Item 1</div>
-		<div class="menu-item">Item 2</div>
-		<div class="menu-item item_3">Item 3</div>
-	</div>
-</script>
-
-
-
+	<script type="text/template" id="Template">
+		<div class="menu-item <%= dom_id %> <%= category %>"><%= item.get('title') %></div>
+	</script>
 </body>
 </html>

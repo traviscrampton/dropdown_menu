@@ -8,30 +8,46 @@ html, body {
   width: 200px;
   line-height: 70px;
 	text-align: center;
-	border: 1px solid black;
+	border-bottom: 1px solid black;
 	vertical-align: middle;
-	/*background: pink;*/
+
 }
 
-#startNav .menu-item{
+
+.innersub_2{
+	border-top: none;
+	border-bottom;
+}
+.itemViews{
+	border: 1px solid black;
+	border-bottom: none;
+	display: inline-block;
+}
+.itemViews .menu-item{
 	background: pink;
 }
-#subz{
+.subViews{
 	width: 200px;
 	position: absolute;
 	left: 226px;
 	top: 168px;
+	border: 1px solid black;
+	border-bottom: none;
+	display: inline-block;
 }
-#subz .menu-item{
+.subViews .menu-item{
 	background: violet;
 }
 
-#subz_subz{
+.innerSubViews{
 	width: 200px;
 	position: absolute;
-	left: 201px;
-	top: 144px;
+	left: 200px;
+	top: 139.5px;
+	border: 1px solid black;
+	border-bottom: none;
+	display: inline-block;
 }
-#subz_subz .menu-item{
+.innerSubViews .menu-item{
 	background: limegreen;
 }

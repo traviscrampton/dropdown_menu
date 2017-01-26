@@ -2,25 +2,24 @@ BaseView = Backbone.View.extend({
 
 	initialize: function(){
 		this.setUpEvents();
-		this.prepareTemplates();
 		this.render();
 	},
 
 	setUpEvents(){
-		this.listenTo(SubSubView.prototype, 'removeSubTabs', this.render)
+		this.listenTo(InnerSubView.prototype, 'removeSubTabs', this.removeSubViews)
 	},
 
-	prepareTemplates: function(){
-		itemTemplate = _.template($('#part_1_full_navigation').html())
-		subTemplate = _.template($('#subviews').html())
-		subSubTemplate = _.template($('#subsubViews').html())
+	removeSubViews: function() {
+		this.itemList.remove();
+		this.render();
 	},
 
 	render: function(){
-		new ItemView({
-			el:'#navigation'
+		this.itemList = new ItemListView({
+			className:'itemViews',
+			collection: new ItemCollection(MENU)
 		})
+
+		$('#navigation').append(this.itemList.$el)
 	}
-
-
 })
